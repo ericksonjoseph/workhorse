@@ -1,0 +1,23 @@
+{
+  "name": "workhorse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericksonjoseph/workhorse.git"
+  },
+  "keywords": [],
+  "author": "Erickson Joseph <erickson1.joseph@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericksonjoseph/workhorse/issues"
+  },
+  "homepage": "https://github.com/ericksonjoseph/workhorse#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
