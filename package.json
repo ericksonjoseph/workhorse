@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/ericksonjoseph/workhorse#readme",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.2.1"
   }
 }

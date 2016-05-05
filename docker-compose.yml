@@ -1,0 +1,35 @@
+web:
+  image: ericksonjoseph/nginx
+  ports:
+    - "8080:80"
+  volumes:
+    - ./:/var/www
+    - ./provision/vhost.conf:/etc/nginx/sites-enabled/vhost.conf
+  links:
+    - php
+
+php:
+  image: nmcteam/php56
+  volumes:
+    - ./:/var/www
+    - ./provision/php-fpm.conf:/etc/php5/fpm/php-fpm.conf
+    - ./provision/php.ini:/etc/php5/fpm/php.ini
+  links:
+    - session
+    - db
+
+session:
+  image: redis
+  volumes:
+    - ./provision/redis.conf:/etc/redis/redis.conf
+  ports:
+    - "6379:6379"
+
+db:
+  image: sameersbn/mysql
+  ports:
+   - "3306:3306"
+  environment:
+   - DB_NAME=mysql
+   - DB_USER=root
+   - DB_PASS=root
